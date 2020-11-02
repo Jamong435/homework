@@ -11,8 +11,8 @@ public class main {
 		// 1. 일반회원 : 이름, 나이
 		// 2. 학 생 : 이름, 나이, 전공
 		// 3. 학 생 2 : 이름, 나이, 전공		
-		// 4. 교 수 : 이름, 나이, 연구과제
-		// 5. 근로학생 : 이름, 나이, 전공, 업무
+		// 4. 교 수 : 이름, 나이, 연구과제, 학년
+		// 5. 근로학생 : 이름, 나이, 전공, 업무 , 몸무게, 학년
 		// 6. 노동자 : 이름, 나이, 업무
 		// 7. 깡패 : 이름,나이, 총 소지여부
 
@@ -28,11 +28,11 @@ public class main {
 		stu2.show();
 
 		// 교수
-		Professor pro = new Professor("lee", 50, "mobile optimization");
+		Professor pro = new Professor("lee", 50, "mobile optimization",5);
 		pro.show();
 
 		// 근로학생
-		AlbaStudent alba = new AlbaStudent("hong", 23, "web", "pc management");
+		AlbaStudent alba = new AlbaStudent("hong", 23, "web", "pc management",80,3);
 		alba.show();
 
 		//노동자
@@ -120,16 +120,18 @@ class Student2 extends Person {
 class Professor extends Person {
 
 	private String subject = "";
+	private int grade ;
 
 	public Professor() {
 		// TODO Auto-generated constructor stub
 	}
 
 	// 생성자 오버로딩
-	public Professor(String name, int age, String subject) {
+	public Professor(String name, int age, String subject, int grade) {
 		// TODO Auto-generated constructor stub
 		super(name, age);
 		this.subject = subject;
+		this.grade= grade;
 	}
 
 	@Override
@@ -137,6 +139,7 @@ class Professor extends Person {
 		// TODO Auto-generated method stub
 		super.show();
 		System.out.println("subject : " + subject);
+		System.out.println("subject : " + grade);
 	}
 
 }
@@ -144,15 +147,19 @@ class Professor extends Person {
 class AlbaStudent extends Student {
 
 	private String task = new String("");
+	private int weight;
+	private int grade;
 
 	public AlbaStudent() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public AlbaStudent(String name, int age, String major, String task) {
+	public AlbaStudent(String name, int age, String major, String task , int weight ,int grade) {
 		super(name, age, major);
 		// TODO Auto-generated constructor stub
 		this.task = task;
+		this.weight= weight;
+		this.grade= grade;
 	}
 
 	@Override
@@ -160,6 +167,9 @@ class AlbaStudent extends Student {
 		// TODO Auto-generated method stub
 		super.show();
 		System.out.println("task : " + task);
+		System.out.println("weight:" + weight);
+		System.out.println("grade" + grade);
+		
 	}
 
 }
