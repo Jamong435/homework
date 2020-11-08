@@ -75,6 +75,16 @@ public class Country extends Person {
 	}
 	
 	
+	public void show() {
+		System.out.println(getCn());
+		System.out.println(getNf());
+		System.out.println(getPn());
+		System.out.println(getCs());
+		System.out.println(getGDP());
+		System.out.println(getCorona());
+		System.out.println(getTex());
+	}
+	
 	
 	
 }

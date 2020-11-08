@@ -1,15 +1,17 @@
 package homework2;
 
-public class Japan extends Korea {
+public class Japan extends Country {
 
 	String Location; // 관광지
-	String sushi; //일본 음식
-	String gimo; //일본 기모노
-	public Japan(int sGI, long tS, boolean dockdo, String location, String sushi, String gimo) {
-		super(sGI, tS, dockdo);
+	String JPfd; //일본 음식
+	String JPCT; //일본 기모노
+	public Japan(String name, String phone, String gender, String address, String email, int age, int height,
+			boolean corona, String cn, String nf, String cp, Long pn, Long cs, int gDP, int corona2, float tex,
+			String location, String jPfd, String jPCT) {
+		super(name, phone, gender, address, email, age, height, corona, cn, nf, cp, pn, cs, gDP, corona2, tex);
 		Location = location;
-		this.sushi = sushi;
-		this.gimo = gimo;
+		JPfd = jPfd;
+		JPCT = jPCT;
 	}
 	public String getLocation() {
 		return Location;
@@ -17,18 +19,20 @@ public class Japan extends Korea {
 	public void setLocation(String location) {
 		Location = location;
 	}
-	public String getSushi() {
-		return sushi;
+	public String getJPfd() {
+		return JPfd;
 	}
-	public void setSushi(String sushi) {
-		this.sushi = sushi;
+	public void setJPfd(String jPfd) {
+		JPfd = jPfd;
 	}
-	public String getGimo() {
-		return gimo;
+	public String getJPCT() {
+		return JPCT;
 	}
-	public void setGimo(String gimo) {
-		this.gimo = gimo;
+	public void setJPCT(String jPCT) {
+		JPCT = jPCT;
 	}
+	
+	
 	
 	
 	

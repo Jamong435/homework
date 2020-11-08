@@ -2,6 +2,11 @@ package homework2;
 
 public class Person {
 	
+	
+	
+	
+	
+	
 	private String name; // 이름
 	private String phone; // 전화번호
 	private String gender ; // 성별
@@ -9,11 +14,11 @@ public class Person {
 	private String email; // 이메일
 	private int age; //나이
 	private int height; //키
-	private boolean corona; // 코로나 감염여부
+	private boolean coronaYN; // 코로나 감염여부
 	
 	
 	public Person(String name, String phone, String gender, String address, String email, int age, int height,
-			boolean corona) {
+			boolean coronaYN) {
 		super();
 		this.name = name;
 		this.phone = phone;
@@ -22,7 +27,7 @@ public class Person {
 		this.email = email;
 		this.age = age;
 		this.height = height;
-		this.corona = corona;
+		this.coronaYN = coronaYN;
 	}
 	public String getName() {
 		return name;
@@ -67,10 +72,10 @@ public class Person {
 		this.height = height;
 	}
 	public boolean isCorona() {
-		return corona;
+		return coronaYN;
 	}
 	public void setCorona(boolean corona) {
-		this.corona = corona;
+		this.coronaYN = corona;
 	}
 	
 	
